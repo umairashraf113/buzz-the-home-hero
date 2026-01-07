@@ -358,3 +358,33 @@ textarea:focus {
         direction: ltr;
     }
 }
+
+/* Reviews */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.review-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.stars {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.review-text {
+    font-style: italic;
+    color: var(--color-text-main);
+    margin-bottom: 1.5rem;
+}
+
+.review-author {
+    font-weight: 700;
+    color: var(--color-primary);
+}
