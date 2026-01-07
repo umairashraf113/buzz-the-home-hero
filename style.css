@@ -311,3 +311,50 @@ textarea:focus {
     font-size: 0.85rem;
     font-weight: 500;
 }
+
+/* Services Page Specifics */
+.service-detail-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.service-detail-row.reverse {
+    direction: rtl;
+}
+
+.service-detail-row.reverse>* {
+    direction: ltr;
+}
+
+.service-list {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.service-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+.service-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .service-detail-row {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .service-detail-row.reverse {
+        direction: ltr;
+    }
+}
