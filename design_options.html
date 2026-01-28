@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BZ.Built&Fix - Design Options</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Oswald:wght@500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .option-container {
+            border-bottom: 5px solid #ccc;
+            position: relative;
+        }
+
+        .option-label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            z-index: 100;
+        }
+
+        /* Common Hero Styles */
+        .hero {
+            padding: 4rem 2rem;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        /* OPTION 1: Modern Professional (Navy & Orange) */
+        .opt-1 .hero {
+            background: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.8)), url('images/hero-bg.jpg');
+            /* Fallback color if image missing */
+            color: white;
+            background-color: #003366;
+        }
+
+        .opt-1 .hero-tagline {
+            color: #C0C0C0;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .opt-1 .btn-primary {
+            background: #FF8C00;
+            color: white;
+        }
+
+        .opt-1 .btn-outline {
+            border: 2px solid white;
+            color: white;
+        }
+
+        /* OPTION 2: Industrial Bold (Black & Yellow) */
+        .opt-2 .hero {
+            background: linear-gradient(rgba(17, 17, 17, 0.9), rgba(17, 17, 17, 0.8));
+            color: white;
+            background-color: #111;
+        }
+
+        .opt-2 .hero-text-content {
+            text-align: left;
+        }
+
+        .opt-2 .hero {
+            justify-content: flex-start;
+            text-align: left;
+        }
+
+        .opt-2 .hero-tagline {
+            color: #FFD700;
+            background: rgba(255, 215, 0, 0.1);
+            display: inline-block;
+            padding: 5px 10px;
+            margin-bottom: 1rem;
+        }
+
+        .opt-2 .hero-title {
+            font-style: italic;
+            text-transform: uppercase;
+        }
+
+        .opt-2 .btn-primary {
+            background: #FFD700;
+            color: #000;
+            border-radius: 0;
+        }
+
+        .opt-2 .btn-outline {
+            border: 2px solid #FFD700;
+            color: #FFD700;
+            border-radius: 0;
+        }
+
+        /* OPTION 3: Clean Minimalist (White, Teal, Dark Text) */
+        .opt-3 .hero {
+            background: #f4f4f4;
+            color: #222;
+        }
+
+        .opt-3 .hero-tagline {
+            color: #008080;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .opt-3 .hero-title {
+            color: #222;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .opt-3 .btn-primary {
+            background: #008080;
+            color: white;
+            border-radius: 50px;
+        }
+
+        .opt-3 .btn-outline {
+            border: 2px solid #222;
+            color: #222;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- OPTION 1 -->
+    <div class="option-container opt-1">
+        <div class="option-label">Option 1: Modern Professional (Navy/Orange)</div>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="hero-tagline">FROM REPAIRS TO RENO</p>
+                <h1 class="hero-title">WE BUILD STRONGER. <br> WE FIX BETTER.</h1>
+                <p class="hero-subtitle">The only partner you need for home renovations and repairs.</p>
+                <div class="hero-cta">
+                    <a href="#" class="btn btn-primary">Book a Service</a>
+                    <a href="#" class="btn btn-outline">See Work</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- OPTION 2 -->
+    <div class="option-container opt-2">
+        <div class="option-label">Option 2: Industrial Bold (Black/Yellow)</div>
+        <section class="hero">
+            <div class="container" style="max-width: 1200px; padding: 0 20px;">
+                <div class="hero-content">
+                    <p class="hero-tagline">FROM REPAIRS TO RENO</p>
+                    <h1 class="hero-title">WE BUILD STRONGER.<br>WE FIX BETTER.</h1>
+                    <p class="hero-subtitle">Heavy duty construction and precision repairs. Done right the first time.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#" class="btn btn-primary">GET A QUOTE</a>
+                        <a href="#" class="btn btn-outline">OUR PROJECTS</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- OPTION 3 -->
+    <div class="option-container opt-3">
+        <div class="option-label">Option 3: Clean Minimalist (Teal/White)</div>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="hero-tagline">FROM REPAIRS TO RENO</p>
+                <h1 class="hero-title">We Build Stronger.<br>We Fix Better.</h1>
+                <p class="hero-subtitle" style="color: #666;">Simplifying home improvement with trusted professionals.
+                </p>
+                <div class="hero-cta">
+                    <a href="#" class="btn btn-primary">Book Now</a>
+                    <a href="#" class="btn btn-outline">View Portfolio</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

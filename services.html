@@ -5,154 +5,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Full list of handyman services by Buzz The Home Hero Company. Plumbing, Electrical, Repairs, and more.">
-    <title>Services | Buzz The Home Hero Company</title>
+        content="Comprehensive home maintenance list: Drywall, Painting, Flooring, Decks, Plumbing leaks, and Fixture installation. Reliable and insured services in Oakville.">
+    <title>Our Services | Construction, Plumbing & Electrical | BZ.Built&Fix</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;700&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
-    <!-- Navigation -->
-    <header class="header" id="header">
+    <!-- Header -->
+    <header class="header">
         <div class="container header-container">
-            <a href="index.html" class="logo">Buzz The Home Hero Company</a>
+            <a href="index.html" class="logo">
+                <span class="logo-text">BZ<span class="logo-highlight">.Built&Fix</span></span>
+            </a>
             <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="services.html" class="nav-link active">Services</a></li>
-                    <li><a href="index.html#why-us" class="nav-link">Why Us</a></li>
-                    <li><a href="tel:6399150864" class="nav-link" style="font-weight: 700;">📞 639-915-0864</a></li>
-                    <li><a href="index.html#contact" class="nav-link btn btn-primary">Get a Quote</a></li>
-                </ul>
+                <!-- Mobile Call Button -->
+                <a href="tel:6399150864" class="mobile-call-btn" aria-label="Call Us">📞</a>
+
                 <button class="mobile-toggle" aria-label="Toggle Menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </button>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link active">Services</a></li>
+                    <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                    <li><a href="tel:6399150864" class="nav-link" style="color: var(--color-gold);">📞 639-915-0864</a>
+                    </li>
+                    <li><a href="index.html#contact" class="btn btn-primary">Get a Quote</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- Page Header -->
-        <section class="page-header"
-            style="padding-top: 160px; padding-bottom: 60px; background-color: #f0f4f8; text-align: center;">
+        <!-- Page Header (Editorial Style) -->
+        <section class="hero-editorial" style="min-height: 50vh;">
             <div class="container">
-                <h1 class="hero-title" style="font-size: 3rem; margin-bottom: 1rem;">Our Services</h1>
-                <p class="hero-subtitle" style="margin: 0 auto;">Comprehensive home maintenance solutions. One call does
-                    it all.</p>
-            </div>
-        </section>
-
-        <!-- Use Process Section (Visual Improvement) -->
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">How We Work</h2>
-                <div class="features-grid">
-                    <div class="feature">
-                        <div class="icon">📞</div>
-                        <h3>1. You Call</h3>
-                        <p>Tell us about your project or repair needs.</p>
-                    </div>
-                    <div class="feature">
-                        <div class="icon">📋</div>
-                        <h3>2. We Quote</h3>
-                        <p>Get a transparent, competitive price.</p>
-                    </div>
-                    <div class="feature">
-                        <div class="icon">✨</div>
-                        <h3>3. We Fix</h3>
-                        <p>Our pros complete the work to your satisfaction.</p>
-                    </div>
-                </div>
+                <h1 class="hero-headline" style="font-size: 5rem;">OUR EXPERTISE</h1>
+                <p class="intro-paragraph" style="max-width: 600px; border-left-color: var(--primary);">
+                    Comprehensive home maintenance solutions. From the foundation to the roof, one call does it all.
+                </p>
             </div>
         </section>
 
         <!-- Detailed Services -->
-        <section class="section">
+        <section class="section-padding">
             <div class="container">
 
-                <!-- Category 1 -->
-                <div class="service-detail-row">
-                    <div class="service-text">
-                        <div class="icon">🔧</div>
-                        <h2>General Repairs & Maintenance</h2>
-                        <p>The core of our business. Those small annoying jobs you've been putting off? We handle them
-                            in a single visit.</p>
-                        <ul class="service-list">
-                            <li>Drywall Patching & Painting</li>
-                            <li>Furniture Assembly (IKEA, Wayfair)</li>
-                            <li>TV Mounting & Shelf Installation</li>
-                            <li>Door & Window Adjustments</li>
-                            <li>Picture Hanging</li>
-                        </ul>
-                        <a href="index.html#contact" class="btn btn-outline"
-                            style="margin-left: 0; margin-top: 1.5rem;">Book General Repair</a>
+                <!-- Category 1: Construction -->
+                <div class="masonry-grid"
+                    style="grid-template-columns: 1fr 1fr; grid-template-rows: auto; margin-bottom: 5rem;">
+                    <div class="masonry-item"
+                        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/hero-bg.png'); background-size: cover; min-height: 400px;">
+                        <!-- Image Column -->
                     </div>
-                    <div class="service-image-placeholder">
-                        <!-- Placeholder for future image -->
-                        <div
-                            style="background: #e2e8f0; width: 100%; height: 300px; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #94a3b8;">
-                            Image Promotes Trust
+                    <div class="masonry-item item-medium bg-white text-dark"
+                        style="grid-column: auto; grid-row: auto; justify-content: center;">
+                        <div class="masonry-content">
+                            <h2 class="masonry-title text-dark">CONSTRUCTION</h2>
+                            <p style="margin-bottom: 1.5rem;">Transform your space with premium building services.</p>
+                            <ul class="masonry-list" style="color: var(--dark);">
+                                <li>Basement Finishing & Remodeling</li>
+                                <li>Kitchen & Bathroom Updates</li>
+                                <li>Custom Decks & Fences</li>
+                                <li>Flooring Installation</li>
+                            </ul>
+                            <a href="index.html#contact" class="btn btn-primary">Book Consultation</a>
                         </div>
                     </div>
                 </div>
 
-                <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 4rem 0;">
+                <!-- Category 2: Repairs -->
+                <div class="masonry-grid"
+                    style="grid-template-columns: 1fr 1fr; grid-template-rows: auto; margin-bottom: 5rem;">
+                    <div class="masonry-item item-medium bg-dark text-white"
+                        style="grid-column: auto; grid-row: auto; justify-content: center;">
+                        <div class="masonry-content">
+                            <h2 class="masonry-title text-white">REPAIRS</h2>
+                            <p style="margin-bottom: 1.5rem;">Select a category to see what we fix:</p>
 
-                <!-- Category 2 -->
-                <div class="service-detail-row reverse">
-                    <div class="service-text">
-                        <div class="icon">🚿</div>
-                        <h2>Plumbing Services</h2>
-                        <p>Don't let a small leak damage your home. Our experts handle common residential plumbing needs
-                            quickly and cleanly.</p>
-                        <ul class="service-list">
-                            <li>Leaky Tap Repair & Replacement</li>
-                            <li>Toilet Repair (Running/Clogging)</li>
-                            <li>Sink & Vanity Installation</li>
-                            <li>Minor Pipe Leaks</li>
+                            <!-- Tab Navigation -->
+                            <div class="tabs-nav">
+                                <button class="tab-btn active" data-tab="general">General</button>
+                                <button class="tab-btn" data-tab="assembly">Assembly</button>
+                                <button class="tab-btn" data-tab="mounting">Mounting</button>
+                            </div>
+
+                            <!-- Tab Content: General -->
+                            <div id="general" class="tab-content active">
+                                <ul class="masonry-list" style="color: white;">
+                                    <li>Drywall Patching & Painting</li>
+                                    <li>Door & Window Adjustments</li>
+                                    <li>Tile Grout & Caulking</li>
+                                    <li>Baseboard & Trim Repair</li>
+                                </ul>
+                            </div>
+
+                            <!-- Tab Content: Assembly -->
+                            <div id="assembly" class="tab-content">
+                                <ul class="masonry-list" style="color: white;">
+                                    <li>IKEA / Wayfair Furniture</li>
+                                    <li>Office Desk Setup</li>
+                                    <li>Bed Frame Assembly</li>
+                                    <li>Exercise Equipment</li>
+                                </ul>
+                            </div>
+
+                            <!-- Tab Content: Mounting -->
+                            <div id="mounting" class="tab-content">
+                                <ul class="masonry-list" style="color: white;">
+                                    <li>TV Wall Mounting</li>
+                                    <li>Heavy Mirror Hanging</li>
+                                    <li>Floating Shelves</li>
+                                    <li>Curtain Rods & Blinds</li>
+                                </ul>
+                            </div>
+
+                            <a href="index.html#contact" class="btn btn-white" style="margin-top: 1rem;">Book Repair</a>
+                        </div>
+                    </div>
+                    <div class="masonry-item"
+                        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/bath.png'); background-size: cover; min-height: 400px;">
+                        <!-- Image Column -->
+                    </div>
+                </div>
+
+                <!-- Category 3: Plumbing/Electrical (Split) -->
+                <div class="header-split">
+                    <h2 class="section-header-bold">SPECIALTY</h2>
+                </div>
+                <div class="project-row" style="grid-template-columns: 1fr 1fr;">
+                    <div class="project-tile bg-dark" style="height: auto; padding: 40px;">
+                        <h3 class="text-white" style="font-size: 2rem; margin-bottom: 1rem;">PLUMBING</h3>
+                        <ul class="masonry-list-simple" style="color: #ccc;">
+                            <li>Leaky Tap Repair</li>
+                            <li>Toilet Repair</li>
+                            <li>Vanity Installation</li>
                             <li>Caulking & Sealing</li>
                         </ul>
-                        <a href="index.html#contact" class="btn btn-outline"
-                            style="margin-left: 0; margin-top: 1.5rem;">Book Plumbing</a>
                     </div>
-                    <div class="service-image-placeholder">
-                        <div
-                            style="background: #e2e8f0; width: 100%; height: 300px; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #94a3b8;">
-                            Image Shows Capability
-                        </div>
-                    </div>
-                </div>
-
-                <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 4rem 0;">
-
-                <!-- Category 3 -->
-                <div class="service-detail-row">
-                    <div class="service-text">
-                        <div class="icon">⚡</div>
-                        <h2>Electrical Updates</h2>
-                        <p>Modernize your home safely. We handle localized electrical tasks to brighten up your space.
-                        </p>
-                        <ul class="service-list">
-                            <li>Light Fixture Installation</li>
-                            <li>Ceiling Fan Replacement</li>
-                            <li>Outlet & Switch Replacement</li>
-                            <li>Smart Home Device Setup (Ring, Nest)</li>
-                            <li>Dimmer Switch Upgrade</li>
+                    <div class="project-tile bg-primary" style="height: auto; padding: 40px;">
+                        <h3 class="text-white" style="font-size: 2rem; margin-bottom: 1rem;">ELECTRICAL</h3>
+                        <ul class="masonry-list-simple" style="color: white;">
+                            <li>Light Fixtures</li>
+                            <li>Ceiling Fans</li>
+                            <li>Outlet Replacement</li>
+                            <li>Smart Home Setup</li>
                         </ul>
-                        <a href="index.html#contact" class="btn btn-outline"
-                            style="margin-left: 0; margin-top: 1.5rem;">Book Electrical</a>
-                    </div>
-                    <div class="service-image-placeholder">
-                        <div
-                            style="background: #e2e8f0; width: 100%; height: 300px; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #94a3b8;">
-                            Image Shows Safety
-                        </div>
                     </div>
                 </div>
 
@@ -160,27 +166,31 @@
         </section>
 
         <!-- CTA Banner -->
-        <section class="section" style="background-color: var(--color-primary); color: white; text-align: center;">
+        <section class="section-padding bg-black text-white" style="text-align: center;">
             <div class="container">
-                <h2 style="color: white; margin-bottom: 1rem;">Have a project not listed here?</h2>
+                <h2 style="color: white; margin-bottom: 1rem;">HAVE A PROJECT NOT LISTED?</h2>
                 <p style="margin-bottom: 2rem; color: #cbd5e1;">Give us a call. If we can't do it, we probably know
                     someone who can.</p>
-                <a href="index.html#contact" class="btn"
-                    style="background-color: var(--color-accent); color: var(--color-primary);">Contact Us Today</a>
+                <a href="index.html#contact" class="btn btn-white">Contact Us Today</a>
             </div>
         </section>
 
     </main>
 
-    <footer class="footer">
-        <div class="container footer-content">
+    <footer class="footer-simple">
+        <div class="container footer-flex">
             <div class="footer-brand">
-                <h3>Buzz The Home Hero Company</h3>
-                <p style="margin: 0.5rem 0;">📞 <a href="tel:6399150864">639-915-0864</a></p>
-                <p style="margin: 0.5rem 0;">✉️ <a href="mailto:umairashraf113@gmail.com">umairashraf113@gmail.com</a>
-                </p>
-                <p>&copy; 2024. All rights reserved.</p>
+                <h3>BZ.Built&Fix</h3>
+                <p>639-915-0864</p>
+                <p>umairashraf113@gmail.com</p>
             </div>
+            <div class="footer-cta">
+                <p>Ready to improve your home?</p>
+                <a href="index.html#contact" class="btn btn-white">GET A QUOTE</a>
+            </div>
+        </div>
+        <div class="container copyright">
+            &copy; 2026 BZ.Built&Fix.
         </div>
     </footer>
 

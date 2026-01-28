@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BZ Layout Prototypes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Shared Styles */
+        :root {
+            --primary: #008080;
+            --dark: #1a1a1a;
+            --light: #f4f4f4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background: #fff;
+        }
+
+        h1,
+        h2 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            display: inline-block;
+            text-decoration: none;
+            font-weight: bold;
+            background: var(--dark);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .separator {
+            background: #fee;
+            padding: 20px;
+            text-align: center;
+            color: red;
+            font-weight: bold;
+            border-top: 5px dashed red;
+            margin-top: 50px;
+        }
+
+        /* --- OPTION A: ASYMMETRIC SPLIT --- 
+           Good for: Showing text and image equally. Modern standard. */
+        .layout-a .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 80vh;
+        }
+
+        .layout-a .hero-text {
+            padding: 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #f8f9fa;
+        }
+
+        .layout-a .hero-img {
+            background: #ccc;
+            /* Placeholder */
+            background-image: linear-gradient(45deg, #ccc 25%, #ddd 25%, #ddd 50%, #ccc 50%, #ccc 75%, #ddd 75%, #ddd 100%);
+            background-size: 20px 20px;
+        }
+
+        .layout-a h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+
+        .layout-a .floating-badge {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        /* --- OPTION B: OVERLAPPING DEPTH --- 
+           Good for: "Catchy" feel, breaks the grid. High impact. */
+        .layout-b {
+            background: #fff;
+        }
+
+        .layout-b .hero {
+            background: var(--dark);
+            color: white;
+            padding: 80px 20px 150px 20px;
+            /* Extra bottom padding for overlap */
+            text-align: center;
+        }
+
+        .layout-b h1 {
+            font-size: 5rem;
+            margin-bottom: 20px;
+        }
+
+        .layout-b .services-overlap {
+            max-width: 1000px;
+            margin: -100px auto 0;
+            /* Pulls it UP into the hero */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .layout-b .card {
+            background: white;
+            color: black;
+            padding: 40px 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-bottom: 5px solid var(--primary);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .layout-b .card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* --- OPTION C: MAGAZINE / MASONRY --- 
+           Good for: Visual interest, looks like a design portfolio. */
+        .layout-c .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .layout-c .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 60vh;
+        }
+
+        .layout-c h1 {
+            font-size: 6rem;
+            line-height: 0.9;
+            flex: 1;
+        }
+
+        .layout-c .intro-text {
+            flex: 0 0 300px;
+            font-size: 1.1rem;
+            border-left: 3px solid var(--primary);
+            padding-left: 20px;
+        }
+
+        .layout-c .masonry-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .layout-c .big-item {
+            background: #eee;
+            height: 400px;
+            display: flex;
+            align-items: flex-end;
+            padding: 30px;
+            font-size: 2rem;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+        }
+
+        .layout-c .small-item {
+            background: var(--primary);
+            color: white;
+            height: 400px;
+            /* Same height for alignment in this simple grid */
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Mobile tweaks */
+        @media(max-width: 768px) {
+
+            .layout-a .hero,
+            .layout-c .hero,
+            .layout-c .masonry-grid,
+            .layout-b .services-overlap {
+                grid-template-columns: 1fr;
+                display: block;
+            }
+
+            .layout-a .hero-img {
+                height: 300px;
+            }
+
+            .layout-b .services-overlap {
+                margin-top: 20px;
+            }
+
+            /* No overlap on mobile */
+            .layout-c h1 {
+                font-size: 3rem;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- LAYOUT A -->
+    <div class="layout-a">
+        <div class="separator">OPTION A: Split Screen (Modern & Clean)</div>
+        <section class="hero">
+            <div class="hero-text">
+                <p style="color:var(--primary); font-weight:bold; letter-spacing:2px;">EST. 2024</p>
+                <h1>WE FIX.<br>WE BUILD.<br>WE CARE.</h1>
+                <p style="max-width:400px; margin-bottom:30px; line-height:1.6;">Buzz The Home Hero transforms houses
+                    into homes. Professional renovations and reliable repairs in one call.</p>
+                <div>
+                    <a href="#" class="btn">START A PROJECT</a>
+                </div>
+                <!-- Trust Badges -->
+                <div class="floating-badge">
+                    <span>★ 5.0 Google</span>
+                    <span>✓ Insured</span>
+                </div>
+            </div>
+            <div class="hero-img"></div>
+        </section>
+    </div>
+
+    <!-- LAYOUT B -->
+    <div class="layout-b">
+        <div class="separator">OPTION B: Overlapping Cards (Depth & Dynamic)</div>
+        <section class="hero">
+            <p style="opacity:0.8; letter-spacing:2px; margin-bottom:10px;">PROFESSIONAL HANDYMAN SERVICES</p>
+            <h1>CONSTRUCTION DONE RIGHT</h1>
+            <p style="max-width:600px; margin:0 auto 2rem;">Don't let your home fall apart. We provide the highest
+                quality fixing and building services.</p>
+            <a href="#" class="btn" style="background:white; color:black;">GET QUOTE</a>
+        </section>
+
+        <!-- These cards overlap the hero -->
+        <div class="services-overlap">
+            <div class="card">
+                <div style="font-size:3rem; margin-bottom:10px;">🔨</div>
+                <h3>Quick Fixes</h3>
+                <p>Same-day repairs for drywall, plumbing, and more.</p>
+            </div>
+            <div class="card">
+                <div style="font-size:3rem; margin-bottom:10px;">🏗️</div>
+                <h3>Renovations</h3>
+                <p>Full basements, kitchens, and bathroom remodels.</p>
+            </div>
+            <div class="card">
+                <div style="font-size:3rem; margin-bottom:10px;">⚡</div>
+                <h3>Emergency</h3>
+                <p>24/7 support for critical home failures.</p>
+            </div>
+        </div>
+        <div style="height:100px;"></div> <!-- Spacer -->
+    </div>
+
+    <!-- LAYOUT C -->
+    <div class="layout-c">
+        <div class="separator">OPTION C: Editorial / Bold (High Impact)</div>
+        <div class="container">
+            <section class="hero">
+                <h1>DESIGN.<br>BUILD.<br>RESTORE.</h1>
+                <div class="intro-text">
+                    <p>We believe in quality craftsmanship above all else. Your home deserves the best care.</p>
+                    <br>
+                    <a href="#" class="btn">VIEW OUR WORK</a>
+                </div>
+            </section>
+
+            <div class="masonry-grid">
+                <div class="big-item">
+                    KITCHEN & BATH<br>RENOVATIONS
+                </div>
+                <div class="small-item">
+                    <h3>HANDYMAN SERVICES</h3>
+                    <p style="margin-top:10px;">Small jobs? No problem. We handle lists of any size.</p>
+                    <br>
+                    <u>See List &rarr;</u>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

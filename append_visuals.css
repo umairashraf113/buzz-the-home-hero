@@ -1,0 +1,106 @@
+/* --- VISUAL POLISH ADDITIONS --- */
+
+/* 1. Infinite Marquee */
+.marquee-section {
+    background: var(--dark);
+    color: white;
+    padding: 15px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.marquee-container {
+    display: flex;
+    width: fit-content;
+}
+
+.marquee-content {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+.marquee-content span {
+    padding: 0 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* 2. Hollow Typography */
+.hollow-text {
+    -webkit-text-stroke: 1px var(--dark);
+    color: transparent;
+    transition: all 0.4s ease;
+}
+
+.hollow-text:hover,
+.section-header-bold:hover {
+    -webkit-text-stroke: 0;
+    color: var(--primary);
+}
+
+/* 3. Scroll Animations (Reveal Classes) */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 4. Enhanced Hover Effects */
+.masonry-item {
+    transition: transform 0.4s ease;
+}
+
+.masonry-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.masonry-item:hover .masonry-title {
+    color: var(--primary);
+    transition: color 0.3s;
+}
+
+/* Button Pulse */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn-primary:hover::after {
+    width: 300px;
+    height: 300px;
+}

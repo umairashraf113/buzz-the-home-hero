@@ -1,13 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     const mobileToggle = document.querySelector('.mobile-toggle');
-    const nav = document.querySelector('.nav');
+    const navList = document.querySelector('.nav-list');
 
-    if (mobileToggle) {
+    if (mobileToggle && navList) {
         mobileToggle.addEventListener('click', () => {
-            nav.classList.toggle('active');
-
-            // Animate hamburger to X (optional simple version)
+            navList.classList.toggle('active');
             mobileToggle.classList.toggle('open');
         });
     }
@@ -32,36 +30,58 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Simple Form Handler (Visual Only)
+
+
+    // Simple Form Handler (Visual Only - Formspree skipped for now)
     const form = document.getElementById('contactForm');
     if (form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Thank you for your message! Buzz The Home Hero Company will get back to you soon.');
+            alert('Thank you! BZ.Built&Fix will get back to you soon. (Demo Mode)');
             form.reset();
         });
     }
-
-    // Scroll Reveal Animation (Intersection Observer)
     const observerOptions = {
-        threshold: 0.1
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('active');
             }
         });
     }, observerOptions);
 
-    // Add animation classes to elements
-    const animatedElements = document.querySelectorAll('.service-card, .feature, .hero-content > *');
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+    // Target elements for animation
+    const animatedElements = document.querySelectorAll('.hero-headline, .hero-intro, .intro-paragraph, .masonry-item, .project-tile, .section-header-bold, .testimonial-single, .reveal-up');
+
+    animatedElements.forEach((el, index) => {
+        el.classList.add('reveal-up');
+        // Stagger delay based on index (optional simple staggering)
+        el.style.transitionDelay = `${index % 5 * 100}ms`;
         observer.observe(el);
     });
+    // Tab System Logic
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all
+            tabBtns.forEach(b => b.classList.remove('active'));
+            tabContents.forEach(c => c.classList.remove('active'));
+
+            // Add active class to clicked
+            btn.classList.add('active');
+            const tabId = btn.getAttribute('data-tab');
+            const targetContent = document.getElementById(tabId);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
 });
+
+

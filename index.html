@@ -4,216 +4,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Buzz The Home Hero Company - Premium Home Repair & Maintenance Services">
-    <title>Buzz The Home Hero Company | Professional Home Services</title>
+    <title>BZ.Built&Fix | Expert Handyman & Renovations (Oakville)</title>
+    <meta name="description"
+        content="Trust your home to 10 years of experience. From quick handyman repairs to full basement & kitchen renovations in Oakville, Burlington & Milton. Fully Insured.">
+    <meta name="keywords"
+        content="Handyman Oakville, Renovations Burlington, Basement Finishing, Deck Repair, BZ Built and Fix">
+
+    <!-- Open Graph (Social Sharing) -->
+    <meta property="og:title" content="BZ.Built&Fix | Expert Handyman & Renovations">
+    <meta property="og:description"
+        content="Quality Craftsmanship & Integrity. 8 Years Experience. Serving Oakville & GTA.">
+    <meta property="og:image" content="https://bzbuilt.com/images/hero-bg.png">
+    <meta property="og:type" content="website">
+
     <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Oswald:wght@500;700&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
-    <!-- Navigation -->
-    <header class="header" id="header">
+    <!-- Header -->
+    <header class="header">
         <div class="container header-container">
-            <a href="#" class="logo">Buzz The Home Hero Company</a>
+            <a href="index.html" class="logo">
+                <span class="logo-text">BZ<span class="logo-highlight">.Built&Fix</span></span>
+            </a>
             <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="#why-us" class="nav-link">Why Us</a></li>
-                    <li><a href="tel:6399150864" class="nav-link" style="font-weight: 700;">📞 639-915-0864</a></li>
-                    <li><a href="#contact" class="nav-link btn btn-primary">Get a Quote</a></li>
-                </ul>
+                <!-- Mobile Call Button -->
+                <a href="tel:6399150864" class="mobile-call-btn" aria-label="Call Us">📞</a>
+
                 <button class="mobile-toggle" aria-label="Toggle Menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </button>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="tel:6399150864" class="nav-link" style="color: var(--color-gold);">📞 639-915-0864</a>
+                    </li>
+                    <li><a href="#contact" class="btn btn-primary">Get a Quote</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="container hero-content">
-                <h1 class="hero-title">Expert Repairs.<br>Premium Service.</h1>
-                <p class="hero-subtitle">Your trusted partner for specialized home maintenance and repair. Quality
-                    craftsmanship guaranteed.</p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">Book a Service</a>
-                    <a href="services.html" class="btn btn-outline">Explore Services</a>
+    <!-- Layout C: Split Editorial Hero -->
+    <section class="hero-editorial">
+        <div class="container hero-editorial-container">
+            <h1 class="hero-headline">DESIGN.<br>BUILD.<br>RESTORE.</h1>
+            <div class="hero-intro">
+                <p class="intro-paragraph">We transform houses into homes. From small repairs to full renovations, trust
+                    the BZ Standard for quality craftsmanship.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">START A PROJECT</a>
+                    <a href="#projects" class="btn btn-outline">VIEW WORK</a>
                 </div>
-            </div>
-        </section>
 
-        <!-- Services Section -->
-        <section id="services" class="section services">
-            <div class="container">
-                <h2 class="section-title">Our Expertise</h2>
-                <div class="services-grid">
-                    <!-- Service Card 1 -->
-                    <div class="service-card">
-                        <div class="icon">🔧</div>
-                        <h3>General Repairs</h3>
-                        <p>Quick fixes for everyday household issues.</p>
-                        <div class="service-tags">
-                            <span class="service-tag">Drywall Patching</span>
-                            <span class="service-tag">Leaky Taps</span>
-                            <span class="service-tag">Furniture Assembly</span>
-                        </div>
+                <div class="hero-badges">
+                    <div class="badge-item">
+                        <span class="badge-icon">★</span>
+                        <span>5.0 Google Rated</span>
                     </div>
-                    <!-- Service Card 2 -->
-                    <div class="service-card">
-                        <div class="icon">⚡</div>
-                        <h3>Electrical</h3>
-                        <p>Safe and reliable electrical maintenance.</p>
-                    </div>
-                    <!-- Service Card 3 -->
-                    <div class="service-card">
-                        <div class="icon">🚿</div>
-                        <h3>Plumbing</h3>
-                        <p>Leak fixes, installations, and pipe maintenance.</p>
-                    </div>
-                    <!-- Service Card 4 -->
-                    <div class="service-card">
-                        <div class="icon">🔨</div>
-                        <h3>Carpentry</h3>
-                        <p>Custom woodwork and structural repairs.</p>
+                    <div class="badge-item">
+                        <span class="badge-icon">✓</span>
+                        <span>Fully Insured</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Why Choose Us -->
-        <section id="why-us" class="section why-us">
-            <div class="container">
-                <h2 class="section-title">Why Choose Buzz The Home Hero Company</h2>
-                <div class="features-grid">
-                    <div class="feature">
-                        <h3>Reliable</h3>
-                        <p>We show up on time, every time.</p>
+    <!-- Layout C: Masonry Services -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <div class="masonry-grid">
+                <!-- Large Item: Construction -->
+                <div class="masonry-item item-large"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/kitchen.png');">
+                    <div class="masonry-content">
+                        <h2 class="masonry-title">RENOVATIONS</h2>
+                        <ul class="masonry-list">
+                            <li>Basement Finishing</li>
+                            <li>Kitchen Remodels</li>
+                            <li>Custom Decks</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary-small">Plan Your Reno</a>
                     </div>
-                    <div class="feature">
-                        <h3>Transparent</h3>
-                        <p>Upfront pricing with no hidden fees.</p>
+                </div>
+
+                <!-- Small Item: Handyman -->
+                <div class="masonry-item item-small bg-primary">
+                    <div class="masonry-content centered">
+                        <h2 class="masonry-title">HANDYMAN</h2>
+                        <p style="margin-bottom: 1rem;">The small stuff matters too.</p>
+                        <ul class="masonry-list-simple">
+                            <li>Drywall Patching</li>
+                            <li>Plumbing Leaks</li>
+                            <li>Fixture Install</li>
+                        </ul>
+                        <a href="services.html" class="link-arrow">View Service List &rarr;</a>
                     </div>
-                    <div class="feature">
-                        <h3>Skilled</h3>
-                        <p>Verified professionals with years of experience.</p>
+                </div>
+
+                <!-- Medium Item: Why Us -->
+                <div class="masonry-item item-medium bg-dark">
+                    <div class="masonry-content centered">
+                        <h2 class="masonry-title" style="color: white;">WHY US?</h2>
+                        <p>We show up on time. We clean up. We guarantee our work.</p>
+                        <br>
+                        <div style="font-size: 2rem;">🤝 ⚡ 🛡️</div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Recent Work Gallery -->
-        <section class="section gallery">
-            <div class="container">
-                <h2 class="section-title">Recent Projects</h2>
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="images/project-1.png" alt="Drywall Patching" loading="lazy">
-                        <div class="gallery-caption">Perfect Drywall Patching</div>
+    <!-- Minimalist Trust Strip (Static) -->
+    <section class="trust-strip-simple">
+        <div class="container">
+            <p>SERVING OAKVILLE • BURLINGTON • MILTON • MISSISSAUGA</p>
+        </div>
+    </section>
+
+    <!-- Recent Projects (Horizontal Scroll) -->
+    <section id="projects" class="section-padding" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="header-split">
+                <h2 class="section-header-bold">RECENT WORK</h2>
+                <a href="#contact" class="link-arrow text-dark">Start Yours &rarr;</a>
+            </div>
+
+            <div class="project-row">
+                <!-- Project 1 -->
+                <div class="project-tile">
+                    <img src="images/kitchen.png" alt="Kitchen Remodel" class="project-img">
+                    <div class="project-overlay">
+                        <h4>Kitchen Remodel</h4>
+                        <p>Oakville</p>
                     </div>
-                    <div class="gallery-item">
-                        <img src="images/project-2.png" alt="Plumbing Repair" loading="lazy">
-                        <div class="gallery-caption">Faucet Repair & Install</div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-tile">
+                    <img src="images/bath.png" alt="Master Bath" class="project-img">
+                    <div class="project-overlay">
+                        <h4>Master Bath</h4>
+                        <p>Burlington</p>
                     </div>
-                    <div class="gallery-item">
-                        <img src="images/project-3.png" alt="Electrical Work" loading="lazy">
-                        <div class="gallery-caption">Lighting Installation</div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-tile">
+                    <img src="images/deck.png" alt="Custom Deck" class="project-img">
+                    <div class="project-overlay">
+                        <h4>Custom Deck</h4>
+                        <p>Milton</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Testimonials Section -->
-        <section id="reviews" class="section reviews" style="background-color: #f8fafc;">
-            <div class="container">
-                <h2 class="section-title">What Neighbors Are Saying</h2>
-                <div class="reviews-grid">
-                    <div class="review-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p class="review-text">"Buzz saved the day! Had a leaky pipe under the sink that I couldn't fix.
-                            He came out typically fast and got it sorted."</p>
-                        <p class="review-author">- Sarah M.</p>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p class="review-text">"Professional, polite, and great attention to detail. The drywall patch
-                            is invisible. Highly recommend Buzz The Home Hero!"</p>
-                        <p class="review-author">- Mike T.</p>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p class="review-text">"Finally a handyman who calls back and shows up on time. Did a great job
-                            mounting our new TV."</p>
-                        <p class="review-author">- Emily R.</p>
-                    </div>
+    <!-- Bold Testimonials -->
+    <section class="section-padding bg-black text-white">
+        <div class="container centered-narrow">
+            <h2 class="section-header-bold text-white">CLIENT STORIES</h2>
+            <div class="testimonial-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; text-align: left;">
+
+                <!-- Testimonial 1 -->
+                <div class="testimonial-single">
+                    <p class="big-quote" style="font-size: 1.2rem; margin: 0 0 1rem 0;">"Absolutely fantastic. They
+                        fixed my drywall and painted the room in one day. Super clean work!"</p>
+                    <p class="cite">— Sarah M., Oakville</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-single">
+                    <p class="big-quote" style="font-size: 1.2rem; margin: 0 0 1rem 0;">"I needed my deck repaired
+                        before a party. Murshad came through with a great price and even better quality."</p>
+                    <p class="cite">— James T., Burlington</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-single">
+                    <p class="big-quote" style="font-size: 1.2rem; margin: 0 0 1rem 0;">"Professional, polite, and on
+                        time. Finally a handyman service I can actually trust."</p>
+                    <p class="cite">— Amira K., Milton</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-white">
+        <div class="container header-split" style="align-items: flex-start;">
+            <div style="flex: 1;">
+                <h2 class="section-header-bold" style="font-size: 5rem; line-height: 0.9; margin-bottom: 2rem;">
+                    READY<br>TO<br>START?</h2>
+                <p style="font-size: 1.2rem; max-width: 400px; margin-bottom: 2rem;">
+                    Tell us about your project. Handyman fixes or full renovations—we do it all.
+                </p>
+                <div class="contact-details">
+                    <a href="tel:6399150864" class="btn btn-primary" style="margin-bottom: 10px;">📞 639-915-0864</a>
+                    <br>
+                    <a href="mailto:umairashraf113@gmail.com" class="link-arrow text-dark">umairashraf113@gmail.com</a>
                 </div>
             </div>
-        </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section contact">
-            <div class="container contact-container">
-                <div class="contact-text">
-                    <h2 class="section-title">Ready to Fix It?</h2>
-                    <p>Contact us today for a free quote on your next project.</p>
-                    <div style="margin-top: 2rem;">
-                        <p style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary);">Call or Text Us:
-                        </p>
-                        <a href="tel:6399150864"
-                            style="font-size: 2rem; color: var(--color-accent); font-weight: 800; display: block; margin-top: 0.5rem; margin-bottom: 1rem;">639-915-0864</a>
-
-                        <p style="font-size: 1.25rem; font-weight: 700; color: var(--color-primary);">Email Us:</p>
-                        <a href="mailto:umairashraf113@gmail.com"
-                            style="font-size: 1.25rem; color: var(--color-text-main); font-weight: 500; display: block; margin-top: 0.5rem; margin-bottom: 2rem;">umairashraf113@gmail.com</a>
-
-                        <div
-                            style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                            <p style="font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">🕒 Business
-                                Hours:</p>
-                            <p style="margin-bottom: 1rem;">Mon - Sat: 8:00 AM - 6:00 PM<br>Sun: Emergency Only</p>
-
-                            <p style="font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">📍 Service
-                                Area:</p>
-                            <p>Proudly serving Oakville, Ontario & Surrounding Areas</p>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form" id="contactForm">
+            <div style="flex: 1; margin-top: 10px;">
+                <!-- Form (Simulation Mode) -->
+                <form id="contactForm" class="contact-form">
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" required placeholder="Your Name">
+                        <label>Name</label>
+                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" required placeholder="email@example.com">
+                        <label>Phone</label>
+                        <input type="tel" name="phone" class="form-control" placeholder="Your Phone Number" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" rows="4" required placeholder="How can we help?"></textarea>
+                        <label>Service Needed</label>
+                        <select name="service" class="form-control">
+                            <option>General Handyman</option>
+                            <option>Renovation / Construction</option>
+                            <option>Plumbing / Electrical</option>
+                            <option>Other</option>
+                        </select>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea name="message" class="form-control" rows="4"
+                            placeholder="Describe your project..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-dark" style="width: 100%;">SEND REQUEST</button>
                 </form>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer class="footer">
-        <div class="container footer-content">
+    <!-- Mobile Sticky WhatsApp Button -->
+    <a href="https://wa.me/16399150864" class="mobile-sticky-cta" target="_blank">
+        💬 Chat on WhatsApp
+    </a>
+
+    <footer class="footer-simple">
+        <div class="container footer-flex">
             <div class="footer-brand">
-                <h3>Buzz The Home Hero Company</h3>
-                <p style="margin: 0.5rem 0;">📞 <a href="tel:6399150864">639-915-0864</a></p>
-                <p style="margin: 0.5rem 0;">✉️ <a href="mailto:umairashraf113@gmail.com">umairashraf113@gmail.com</a>
-                </p>
-                <p>&copy; 2024. All rights reserved.</p>
-            </div>
+                <h3>BZ.Built&Fix</h3>
+                <p>639-915-0864</p>
+                <p>umairashraf113@gmail.com</p>
 
+                <div class="trust-badges">
+                    <span class="trust-badge">🛡️ Fully Insured</span>
+                    <span class="trust-badge">✓ WSIB Registered</span>
+                    <span class="trust-badge">⭐ 5-Star Rated</span>
+                </div>
+            </div>
+            <div class="footer-cta">
+                <p>Ready to improve your home?</p>
+                <a href="#contact" class="btn btn-white">GET A QUOTE</a>
+            </div>
+        </div>
+        <div class="container copyright">
+            &copy; 2026 BZ.Built&Fix.
         </div>
     </footer>
 
